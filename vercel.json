@@ -1,32 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static-build"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ],
   "rewrites": [
     {
       "source": "/public/(.*)",
       "destination": "/public/$1"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/public/(.*\\.glb)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "model/gltf-binary"
-        }
-      ]
     }
   ]
 }
